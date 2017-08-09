@@ -7,6 +7,7 @@
 //
 
 #import "NetHelper.h"
+#import <AFNetworking.h>
 
 @implementation NetHelper
 
