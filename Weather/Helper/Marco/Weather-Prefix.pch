@@ -1,0 +1,22 @@
+//
+//  Weather-Prefix.pch
+//  Weather
+//
+//  Created by SSY on 2017/8/7.
+//  Copyright © 2017年 SSY. All rights reserved.
+//
+
+#ifndef Weather_Prefix_pch
+#define Weather_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <Masonry.h>
+#import <AFNetworking.h>
+
+#define kXinzhiWeatherApiKey @"ntj1549mvwi54nqi"
+#define kXinzhiWeatherApiId @"UEC7529CB9"
+
+
+#endif /* Weather_Prefix_pch */
