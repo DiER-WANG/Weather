@@ -15,6 +15,7 @@
 #import <Masonry.h>
 #import <AFNetworking.h>
 #import <YYModel.h>
+#import "NetHelper.h"
 
 #define kXinzhiWeatherApiKey @"ntj1549mvwi54nqi"
 #define kXinzhiWeatherApiId @"UEC7529CB9"
