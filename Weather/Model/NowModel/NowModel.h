@@ -18,8 +18,10 @@
 @property (nonatomic, copy) NSString *humidity;
 @property (nonatomic, copy) NSString *visibility;
 @property (nonatomic, copy) NSString *wind_direction;
-
-
-
+@property (nonatomic, copy) NSString *wind_direction_degree;
+@property (nonatomic, copy) NSString *wind_speed;
+@property (nonatomic, copy) NSString *wind_scale;
+@property (nonatomic, copy) NSString *clouds;
+@property (nonatomic, copy) NSString *dew_point;
 
 @end

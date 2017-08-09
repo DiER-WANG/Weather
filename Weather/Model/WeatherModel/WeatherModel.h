@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@class NowModel, LocationModel;
+
 @interface WeatherModel : NSObject
+
+@property (nonatomic, strong)   LocationModel *location;
+@property (nonatomic, strong)   NowModel *now;
+@property (nonatomic, copy)     NSString *last_update;
 
 @end

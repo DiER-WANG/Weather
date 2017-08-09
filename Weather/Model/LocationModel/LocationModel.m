@@ -10,4 +10,8 @@
 
 @implementation LocationModel
 
++ (NSDictionary *)modelCustomPropertyMapper {
+    return @{@"lid": @"id"};
+}
+
 @end
