@@ -11,4 +11,8 @@
 
 @implementation NetHelper
 
+- (void)getWeather:(NSString *)city completion:(void (^)(NSError *, NSDictionary *))block {
+    
+}
+
 @end
