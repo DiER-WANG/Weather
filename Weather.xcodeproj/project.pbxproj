@@ -18,6 +18,9 @@
 		30B917CA1F3488D800DCF086 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30B917C81F3488D800DCF086 /* LaunchScreen.storyboard */; };
 		30B917D51F3488D800DCF086 /* WeatherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B917D41F3488D800DCF086 /* WeatherTests.m */; };
 		30B917E01F3488D900DCF086 /* WeatherUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B917DF1F3488D900DCF086 /* WeatherUITests.m */; };
+		DD2A86861F3B492700BADD28 /* WeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2A86851F3B492700BADD28 /* WeatherModel.m */; };
+		DD2A868A1F3B4A0C00BADD28 /* LocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2A86891F3B4A0C00BADD28 /* LocationModel.m */; };
+		DD2A868E1F3B4ABC00BADD28 /* NowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2A868D1F3B4ABC00BADD28 /* NowModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,12 @@
 		A68020A170FEE581BD46CEEB /* libPods-Weather.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Weather.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC9B19A82A8E898AFAD1C40C /* Pods-Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.release.xcconfig"; path = "Pods/Target Support Files/Pods-Weather/Pods-Weather.release.xcconfig"; sourceTree = "<group>"; };
 		D0E21BDBF41B722CEA036A99 /* Pods-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Weather/Pods-Weather.debug.xcconfig"; sourceTree = "<group>"; };
+		DD2A86841F3B492700BADD28 /* WeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherModel.h; sourceTree = "<group>"; };
+		DD2A86851F3B492700BADD28 /* WeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherModel.m; sourceTree = "<group>"; };
+		DD2A86881F3B4A0C00BADD28 /* LocationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationModel.h; sourceTree = "<group>"; };
+		DD2A86891F3B4A0C00BADD28 /* LocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationModel.m; sourceTree = "<group>"; };
+		DD2A868C1F3B4ABC00BADD28 /* NowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowModel.h; sourceTree = "<group>"; };
+		DD2A868D1F3B4ABC00BADD28 /* NowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,13 +151,6 @@
 			name = Weather;
 			sourceTree = "<group>";
 		};
-		308357E01F3802BA00043F68 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		308357E11F3802CF00043F68 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,9 +193,9 @@
 		30B917B91F3488D800DCF086 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				DD2A86821F3B48F200BADD28 /* Model */,
 				300252A91F38385C00D3C270 /* Helper */,
 				308357E11F3802CF00043F68 /* View */,
-				308357E01F3802BA00043F68 /* Model */,
 				308357D41F37FB8A00043F68 /* Controller */,
 				308357CB1F37F73700043F68 /* AppDelegate */,
 				30B917C31F3488D800DCF086 /* Main.storyboard */,
@@ -237,6 +239,43 @@
 				A68020A170FEE581BD46CEEB /* libPods-Weather.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD2A86821F3B48F200BADD28 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD2A868B1F3B4A9C00BADD28 /* NowModel */,
+				DD2A86871F3B49D400BADD28 /* LocationModel */,
+				DD2A86831F3B491100BADD28 /* WeatherModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DD2A86831F3B491100BADD28 /* WeatherModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD2A86841F3B492700BADD28 /* WeatherModel.h */,
+				DD2A86851F3B492700BADD28 /* WeatherModel.m */,
+			);
+			path = WeatherModel;
+			sourceTree = "<group>";
+		};
+		DD2A86871F3B49D400BADD28 /* LocationModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD2A86881F3B4A0C00BADD28 /* LocationModel.h */,
+				DD2A86891F3B4A0C00BADD28 /* LocationModel.m */,
+			);
+			path = LocationModel;
+			sourceTree = "<group>";
+		};
+		DD2A868B1F3B4A9C00BADD28 /* NowModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD2A868C1F3B4ABC00BADD28 /* NowModel.h */,
+				DD2A868D1F3B4ABC00BADD28 /* NowModel.m */,
+			);
+			path = NowModel;
 			sourceTree = "<group>";
 		};
 		EBB7EFB43E65273C7DDFFEE3 /* Pods */ = {
@@ -435,6 +474,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD2A868A1F3B4A0C00BADD28 /* LocationModel.m in Sources */,
+				DD2A86861F3B492700BADD28 /* WeatherModel.m in Sources */,
+				DD2A868E1F3B4ABC00BADD28 /* NowModel.m in Sources */,
 				308357DF1F37FC8100043F68 /* ViewController.m in Sources */,
 				30B917BC1F3488D800DCF086 /* main.m in Sources */,
 				300252F21F3A9EA000D3C270 /* NetHelper.m in Sources */,

@@ -25,6 +25,10 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.locationDatasArr = [@[@1, @2, @3, @4] mutableCopy];
     [self initUI];
+    
+    [[NetHelper sharedInstance] getWeather:@"" completion:^(NSError *error, NSDictionary *dict) {
+        NSLog(@"");
+    }];
 }
 
 - (void)initUI {

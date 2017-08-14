@@ -10,4 +10,19 @@
 
 @interface NetHelper : NSObject
 
+/**
+ 单例初始化方法
+
+ @return 单例
+ */
++ (instancetype)sharedInstance;
+
+/**
+ 查询城市的实时天气情况
+
+ @param city 城市名字
+ @param block 查询结果
+ */
+- (void)getWeather:(NSString *)city completion:(void (^)(NSError *error, NSDictionary *dict))block;
+
 @end
