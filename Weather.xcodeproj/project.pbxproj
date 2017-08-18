@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1C148F46449450CC53D09212 /* libPods-Weather.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A68020A170FEE581BD46CEEB /* libPods-Weather.a */; };
 		300252F21F3A9EA000D3C270 /* NetHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 300252F11F3A9EA000D3C270 /* NetHelper.m */; };
+		306934AC1F42A4FC00E21AF2 /* CallRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 306934AB1F42A4FC00E21AF2 /* CallRecorder.m */; };
 		308357CE1F37F85C00043F68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 308357CD1F37F85C00043F68 /* AppDelegate.m */; };
 		308357DF1F37FC8100043F68 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 308357DE1F37FC8100043F68 /* ViewController.m */; };
 		308357E61F380C4D00043F68 /* WeatherTodayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 308357E51F380C4D00043F68 /* WeatherTodayCell.m */; };
@@ -44,6 +45,8 @@
 		300252AD1F383A5D00D3C270 /* Weather-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Weather-Prefix.pch"; sourceTree = "<group>"; };
 		300252F01F3A9EA000D3C270 /* NetHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetHelper.h; sourceTree = "<group>"; };
 		300252F11F3A9EA000D3C270 /* NetHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetHelper.m; sourceTree = "<group>"; };
+		306934AA1F42A4FC00E21AF2 /* CallRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallRecorder.h; sourceTree = "<group>"; };
+		306934AB1F42A4FC00E21AF2 /* CallRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallRecorder.m; sourceTree = "<group>"; };
 		308357CC1F37F85C00043F68 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		308357CD1F37F85C00043F68 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		308357DD1F37FC8100043F68 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Weather/ViewController.h; sourceTree = "<group>"; };
@@ -102,6 +105,7 @@
 		300252A91F38385C00D3C270 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				306934A91F42A4C300E21AF2 /* CallRecorder */,
 				300252EE1F3A9E5D00D3C270 /* NetHelper */,
 				300252AA1F38388300D3C270 /* Marco */,
 			);
@@ -123,6 +127,15 @@
 				300252F11F3A9EA000D3C270 /* NetHelper.m */,
 			);
 			path = NetHelper;
+			sourceTree = "<group>";
+		};
+		306934A91F42A4C300E21AF2 /* CallRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				306934AA1F42A4FC00E21AF2 /* CallRecorder.h */,
+				306934AB1F42A4FC00E21AF2 /* CallRecorder.m */,
+			);
+			path = CallRecorder;
 			sourceTree = "<group>";
 		};
 		308357CB1F37F73700043F68 /* AppDelegate */ = {
@@ -480,6 +493,7 @@
 				308357DF1F37FC8100043F68 /* ViewController.m in Sources */,
 				30B917BC1F3488D800DCF086 /* main.m in Sources */,
 				300252F21F3A9EA000D3C270 /* NetHelper.m in Sources */,
+				306934AC1F42A4FC00E21AF2 /* CallRecorder.m in Sources */,
 				308357E61F380C4D00043F68 /* WeatherTodayCell.m in Sources */,
 				308357CE1F37F85C00043F68 /* AppDelegate.m in Sources */,
 			);

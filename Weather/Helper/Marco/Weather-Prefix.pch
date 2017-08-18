@@ -17,9 +17,7 @@
 #import <YYModel.h>
 #import "NetHelper.h"
 
-#define kXinzhiWeatherApiKey @"ntj1549mvwi54nqi"
-#define kXinzhiWeatherApiId @"UEC7529CB9"
-
+#define OpenWeatherApi @"3147ee08ee3ca39fd636068374ecc7e0"
 
 #define BaseURL @"https://api.seniverse.com/v3/"
 
