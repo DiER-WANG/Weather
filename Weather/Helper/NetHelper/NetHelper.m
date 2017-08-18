@@ -7,7 +7,7 @@
 //
 
 #import "NetHelper.h"
-#import <AFNetworking.h>
+#import "CityWeatherModel.h"
 
 @interface NetHelper()
 
@@ -24,20 +24,14 @@ static NetHelper *singleton = nil;
     return singleton;
 }
 
-- (void)getWeather:(NSString *)city completion:(void (^)(NSError *, NSDictionary *))block {
-
+- (void)getWeather:(NSString *)city completion:(void (^)(NSError *, CityWeatherModel *))block {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    
-    NSDictionary *para = @{
-                           @"key": kXinzhiWeatherApiKey,
-                           @"localtion": @"beijing",
-                           @"language": @"zh-Hans",
-                           @"unit": @"c"};
-    // [BaseURL stringByAppendingString:CurrentWeather]
-    [manager GET:@"https://api.seniverse.com/v3/weather/now.json?key=ntj1549mvwi54nqi&location=beijing&language=zh-Hans&unit=c" parameters:para progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        NSLog(@"");
-        
+    NSDictionary *dict = @{@"q": city,
+                           @"appid": OpenWeatherApi
+                           };
+    [manager GET:[BaseURL stringByAppendingPathComponent:Weather] parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {        
+        CityWeatherModel *weather = [CityWeatherModel yy_modelWithJSON:responseObject];
+        block(nil, weather);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"");
     }];

@@ -19,9 +19,9 @@
 
 #define OpenWeatherApi @"3147ee08ee3ca39fd636068374ecc7e0"
 
-#define BaseURL @"https://api.seniverse.com/v3/"
+#define BaseURL @"https://api.openweathermap.org/data/2.5"
 
 // 天气实况
-#define CurrentWeather @"/weather/now.json"
+#define Weather @"/weather"
 
 #endif /* Weather_Prefix_pch */

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class CityWeatherModel;
 @interface NetHelper : NSObject
 
 /**
@@ -23,6 +23,6 @@
  @param city 城市名字
  @param block 查询结果
  */
-- (void)getWeather:(NSString *)city completion:(void (^)(NSError *error, NSDictionary *dict))block;
+- (void)getWeather:(NSString *)city completion:(void (^)(NSError *error, CityWeatherModel *cityWeather))block;
 
 @end
