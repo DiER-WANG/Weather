@@ -24,17 +24,42 @@ static NetHelper *singleton = nil;
     return singleton;
 }
 
-- (void)getWeather:(NSString *)city completion:(void (^)(NSError *, CityWeatherModel *))block {
+- (void)getWeatherByCityName:(NSString *)cityName completion:(void (^)(NSError *, CityWeatherModel *))block {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    NSDictionary *dict = @{@"q": city,
+    NSDictionary *dict = @{@"q": cityName,
                            @"appid": OpenWeatherApi
                            };
-    [manager GET:[BaseURL stringByAppendingPathComponent:Weather] parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {        
+    
+    [manager GET:[BaseURL stringByAppendingPathComponent:WeatherPath] parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         CityWeatherModel *weather = [CityWeatherModel yy_modelWithJSON:responseObject];
         block(nil, weather);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"");
+        block(error, nil);
     }];
+}
+
+- (void)getWeatherByCityId:(long)cityId completion:(void (^)(NSError *, CityWeatherModel *))block {
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    NSDictionary *dict = @{@"id": @(cityId),
+                           @"appid": OpenWeatherApi
+                           };
+    [manager GET:[BaseURL stringByAppendingPathComponent:WeatherPath] parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        CityWeatherModel *weather = [CityWeatherModel yy_modelWithJSON:responseObject];
+        block(nil, weather);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        block(error, nil);
+    }];
+}
+
+
+#pragma mark - Net Parameter
+- (NSDictionary *)commonParameters {
+    
+    WeatherHelper *parameter = [WeatherHelper sharedHelper];
+    
+    return @{@"appid": OpenWeatherApi,
+             @"lang": [parameter getWeatherLanguage],
+             @"units": [parameter getWeatherUnit]};
 }
 
 @end

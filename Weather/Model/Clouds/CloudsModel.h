@@ -10,6 +10,9 @@
 
 @interface CloudsModel : NSObject
 
+/**
+ Cloudiness
+ */
 @property (nonatomic, assign) NSInteger  all;
 
 @end

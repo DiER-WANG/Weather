@@ -16,12 +16,7 @@
 #import <AFNetworking.h>
 #import <YYModel.h>
 #import "NetHelper.h"
-
-#define OpenWeatherApi @"3147ee08ee3ca39fd636068374ecc7e0"
-
-#define BaseURL @"https://api.openweathermap.org/data/2.5"
-
-// 天气实况
-#define Weather @"/weather"
+#import "Constants.h"
+#import "WeatherHelper.h"
 
 #endif /* Weather_Prefix_pch */

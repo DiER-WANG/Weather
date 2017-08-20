@@ -10,7 +10,14 @@
 
 @interface CoordModel : NSObject
 
+/**
+ City geo location, longitude
+ */
 @property (nonatomic, assign) float  lon;
+
+/**
+ City geo location, latitude
+ */
 @property (nonatomic, assign) float  lat;
 
 @end

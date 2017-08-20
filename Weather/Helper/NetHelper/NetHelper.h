@@ -20,9 +20,18 @@
 /**
  查询城市的实时天气情况
 
- @param city 城市名字
+ @param cityName 城市名字
  @param block 查询结果
  */
-- (void)getWeather:(NSString *)city completion:(void (^)(NSError *error, CityWeatherModel *cityWeather))block;
+- (void)getWeatherByCityName:(NSString *)cityName completion:(void (^)(NSError *error, CityWeatherModel *cityWeather))block;
+
+
+/**
+ 查询城市的实时天气情况
+
+ @param cityId 城市 ID
+ @param block 查询回调
+ */
+- (void)getWeatherByCityId:(long)cityId completion:(void (^)(NSError *error, CityWeatherModel *cityWeather))block;
 
 @end

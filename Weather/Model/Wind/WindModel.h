@@ -10,7 +10,14 @@
 
 @interface WindModel : NSObject
 
+/**
+ Wind speed
+ */
 @property (nonatomic, assign) NSInteger  speed;
+
+/**
+ Wind direction
+ */
 @property (nonatomic, assign) NSInteger  deg;
 
 @end

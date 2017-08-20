@@ -19,9 +19,21 @@
 @property (nonatomic, assign) NSInteger         visibility;
 @property (nonatomic, strong) WeatherModel      *wind;
 @property (nonatomic, strong) CloudsModel       *clouds;
+
+/**
+ Data receiving time
+ */
 @property (nonatomic, assign) NSTimeInterval    dt;
 @property (nonatomic, strong) SysModel          *sys;
+
+/**
+ City identification
+ */
 @property (nonatomic, assign) long              cwid;
+
+/**
+ City name
+ */
 @property (nonatomic, copy)   NSString          *name;
 @property (nonatomic, assign) NSInteger         cod;
 

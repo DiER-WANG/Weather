@@ -26,7 +26,7 @@
     self.locationDatasArr = [@[@1, @2, @3, @4] mutableCopy];
     [self initUI];
     
-    [[NetHelper sharedInstance] getWeather:@"beijing" completion:^(NSError *error, CityWeatherModel *dict) {
+    [[NetHelper sharedInstance] getWeatherByCityName:@"beijing" completion:^(NSError *error, CityWeatherModel *dict) {
         NSLog(@"");
     }];
 }
